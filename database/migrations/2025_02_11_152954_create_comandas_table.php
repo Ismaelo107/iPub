@@ -18,6 +18,8 @@ return new class extends Migration {
             $table->string('producto');
             $table->integer('cantidad');
             $table->string('descripcion');
+            $table->time('horaComanda')->nullable();
+            $table->date('fechaComanda')->nullable();
             $table->timestamps();
 
             $table->foreign('mesa_id')->references('id')->on('mesas')->onDelete('cascade');

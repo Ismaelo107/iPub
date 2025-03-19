@@ -18,7 +18,7 @@ class MesaFactory extends Factory
     {
         return [
             'estado' => $this->faker->randomElement(['abierta', 'pendiente', 'cerrada']),
-            'formaPago' => $this->faker->randomElement(['efectivo', 'tarjeta', 'efectivo']),
+            'formaPago' => $this->faker->randomElement(['efectivo', 'tarjeta']),
             'aPagar' => $this->faker->randomFloat(2, 2, 500),
         ];
     }

@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Producto extends Model
 {
@@ -17,8 +19,11 @@ class Producto extends Model
         'precio_compra',
     ];
 
-    public function comanda(){
-        return $this->belongsTo(Comanda::class, 'comanda_id','id');
+
+    public function comanda()
+    {
+        return $this->belongsTo(Comanda::class, 'comanda_id', 'id');
     }
+
 
 }

@@ -18,6 +18,7 @@ class Comanda extends Model
         'producto',
         'cantidad',
         'descripcion',
+
     ];
 
     public function mesa(): BelongsTo

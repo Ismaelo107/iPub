@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Categoria;
 use App\Models\Comanda;
 use App\Models\Mesa;
 use App\Models\Producto;
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         Mesa::factory(5)->create();
         Comanda::factory(10)->create();
         Producto::factory(10)->create();
+        //Categoria::factory(10)->create();
 
 
     }
