@@ -21,6 +21,7 @@ class ProductoFactory extends Factory
     {
         return [
             'comanda_id' => Comanda::factory(),
+            'categoria_id' => Categoria::factory(),
             'nombre' => $this->faker->randomElement(['Coca-Cola', 'Pepsi', 'Fanta Naranja', 'Sprite']),
             'precio_venta' => $this->faker->randomFloat(2, 10, 100),
             'precio_compra' => $this->faker->randomFloat(2, 10, 100),

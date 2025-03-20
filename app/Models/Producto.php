@@ -14,15 +14,20 @@ class Producto extends Model
     protected $table = 'productos';
     protected $fillable = [
         'comanda_id',
+        'categoria_id',
         'nombre',
         'precio_venta',
         'precio_compra',
     ];
 
 
-    public function comanda()
+    public function comanda(): BelongsTo
     {
         return $this->belongsTo(Comanda::class, 'comanda_id', 'id');
+    }
+    public function categoria(): BelongsTo
+    {
+        return $this->belongsTo(Categoria::class, 'comanda_id', 'id');
     }
 
 

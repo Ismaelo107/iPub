@@ -1,7 +1,8 @@
 <?php
 
 use App\Livewire\Comandas;
-use Illuminate\Support\Facades\Route;
+use App\Livewire\Producto;
 
-Route::view('/', 'welcome')->name('welcome');
+Route::view('/', 'home')->name('welcome');
 Route::get('/comanda/{mesa}', Comandas::class)->name('comanda');
+Route::get('/producto/{categoria}', Producto::class)->name('productoPorCategoria');

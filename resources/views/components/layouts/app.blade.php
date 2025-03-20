@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title ?? 'Mi Aplicación' }}</title>
-    @vite('resources/css/app.css') <!-- IMPORTANTE -->
+    @vite('resources/css/app.css')
     @livewireStyles
 </head>
 <body>

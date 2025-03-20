@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->unsignedBigInteger('mesa_id');
             $table->string('producto');
             $table->integer('cantidad');
-            $table->string('descripcion');
+            $table->string('descripcion')->nullable();
             $table->time('horaComanda')->nullable();
             $table->date('fechaComanda')->nullable();
             $table->timestamps();

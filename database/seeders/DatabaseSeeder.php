@@ -10,6 +10,7 @@ use App\Models\User;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,9 +23,19 @@ class DatabaseSeeder extends Seeder
 
         Mesa::factory(5)->create();
         Comanda::factory(10)->create();
-        Producto::factory(10)->create();
-        //Categoria::factory(10)->create();
+        DB::table('categorias')->insertOrIgnore([
+            ['categoria' => 'Cervezas', 'created_at' => now(), 'updated_at' => now()],
+            ['categoria' => 'Vinos', 'created_at' => now(), 'updated_at' => now()],
+            ['categoria' => 'Refrescos', 'created_at' => now(), 'updated_at' => now()],
+        ]);
 
+
+        // Crear productos asociados a categorías
+        Categoria::all()->each(function ($categoria) {
+            Producto::factory()->count(5)->create([
+                'categoria_id' => $categoria->id,
+            ]);
+        });
 
     }
 }
