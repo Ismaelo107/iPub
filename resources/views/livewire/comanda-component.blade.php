@@ -1,11 +1,10 @@
 <div>
     <div class="bg-blue-500 h-16 p-3 space-x-4">
-    <a href="{{route("welcome")}}" class="text-3xl">Mesas</a>
-    <a href="{{route("categoria")}}" class="text-3xl">Crear categoria</a>
-    <a href="{{route("stock")}}" class="text-3xl">Stock</a>
+        <a href="{{route("welcome")}}" class="text-3xl">Mesas</a>
+        <a href="{{route("categoria")}}" class="text-3xl">Crear categoria</a>
+        <a href="{{route("stock")}}" class="text-3xl">Stock</a>
     </div>
     <div class="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-
 
 
         <h2 class="text-2xl font-bold mb-4">Comanda de Mesa #{{ $mesa->id }}</h2>
