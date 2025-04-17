@@ -24,8 +24,8 @@
                             <td class="px-4 py-2 text-sm">{{ $producto->id }}</td>
                             <td class="px-4 py-2 text-sm">{{ $producto->nombre }}</td>
                             <td class="px-4 py-2 text-sm">{{ $producto-> unidades }}</td>
-                            <td class="px-4 py-2 text-sm">{{ optional($producto->categoria)->categoria ?? 'Sin categoría' }}</td>
-                            <td class="px-4 py-2 text-sm">${{ number_format($producto->precio_venta, 2) }}</td>
+                            <td class="px-4 py-2 text-sm">{{ optional($categoria->nombre)->nombre ?? 'Sin categoría' }}</td>
+                            <td class="px-4 py-2 text-sm">{{ number_format($producto->precio_venta, 2) }}</td>
                             <td class="px-4 py-2 text-sm">${{ number_format($producto->precio_compra, 2) }}</td>
                             <td class="px-4 py-2 text-sm">{{ optional($producto-> descripcion)->descripcion ?? 'Sin descripción'}}</td>
                         </tr>
