@@ -4,31 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Comanda extends Model
 {
-
     use HasFactory;
 
-    protected $table = 'comandas';
     protected $fillable = [
         'mesa_id',
         'producto',
         'cantidad',
         'descripcion',
-
+        'stock_id' // Añadir este campo
     ];
 
-    public function mesa(): BelongsTo
+    public function stock()
     {
-        return $this->belongsTo(Mesa::class, 'mesa_id', 'id');
+        return $this->belongsTo(Stock::class);
     }
 
-    public function productos(): HasMany
+    public function mesa()
     {
-        return $this->hasMany(Producto::class, 'comanda_id', 'id');
+        return $this->belongsTo(Mesa::class);
     }
 }
-
