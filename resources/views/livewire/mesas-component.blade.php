@@ -1,4 +1,4 @@
-<div class="grid grid-cols-5 gap-4 p-3 justify-center">
+ <div class="grid grid-cols-5 gap-4 p-3 justify-center">
     @foreach($mesas as $mesa)
         <div wire:click="irAComanda({{ $mesa->id }})" class="p-4 rounded-lg shadow-md text-center w-fit
             {{ $mesa->estado == 'abierta' ? 'bg-green-300' :
