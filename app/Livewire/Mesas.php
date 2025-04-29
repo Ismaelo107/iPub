@@ -20,7 +20,6 @@ class Mesas extends Component
         return redirect()->route('comanda', ['mesa' => $mesaId]);
     }
 
-
     public function cambiarEstado($mesaId, $nuevoEstado): void
     {
         $mesa = Mesa::find($mesaId);
@@ -28,11 +27,8 @@ class Mesas extends Component
             $mesa->estado = $nuevoEstado;
             $mesa->save();
             $this->mesas = Mesa::all();
-
         }
-
     }
-
 
     public function render()
     {
